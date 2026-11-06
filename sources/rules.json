@@ -1,0 +1,431 @@
+[
+  {
+    "id": "moratorium_60m",
+    "summary": "After 60 continuous months of coverage, no health policy or claim can be contested for non-disclosure or misrepresentation, except for established fraud.",
+    "quote": "No policy and claim of health insurance shall be contestable on any grounds of non-disclosure and/or misrepresentation except for established fraud, after the completion of the Moratorium Period, i.e. 60 months of continuous coverage",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 13, PDF page 8",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "moratorium_60m_regulation",
+    "summary": "The same moratorium rule in the Gazette-notified Insurance Products Regulations (60 continuous months, including portability and migration).",
+    "quote": "After completion of sixty continuous months of coverage (including portability and migration) in health insurance policy, no policy and claim shall be contestable by the insurer on grounds of non-disclosure, misrepresentation, except on grounds of established fraud.",
+    "file": "irdai-insurance-products-regulations-2024.txt",
+    "location": "IRDAI (Insurance Products) Regulations 2024, Schedule III, clause 8, PDF page 37 (Gazette page 38)",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Insurance+Products%29+Regulations%2C+2024.pdf/eb55db8a-a617-d492-b313-f13cfb11afeb?version=1.2&t=1712320142367&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "moratorium_credits_carry_over",
+    "summary": "Credits gained in ported and migrated policies count towards the 60-month moratorium.",
+    "quote": "Note :The accrued credits gained under the ported and migrated policies shall be counted for the purpose of calculating the Moratorium period.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 13 (Note), PDF page 8",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "moratorium_first_policy_si",
+    "summary": "Moratorium applies to the sum insured of the first policy (any increase in sum insured starts its own 60 months).",
+    "quote": "The moratorium would be applicable for the sums insured of the first policy.",
+    "file": "irdai-insurance-products-regulations-2024.txt",
+    "location": "IRDAI (Insurance Products) Regulations 2024, Schedule III, clause 8, PDF page 37 (Gazette page 38)",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Insurance+Products%29+Regulations%2C+2024.pdf/eb55db8a-a617-d492-b313-f13cfb11afeb?version=1.2&t=1712320142367&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "ped_definition",
+    "summary": "Pre-existing disease means any condition diagnosed, or for which advice or treatment was given, not more than 36 months before the policy started.",
+    "quote": "“Pre-existing disease (PED)” means any condition, ailment, injury or disease: a) that is/are diagnosed by a physician not more than 36 months prior to the date of commencement of the policy issued by the insurer; or b) for which medical advice or treatment was recommended by, or received from, a physician, not more than 36 months prior to the date of commencement of the policy.",
+    "file": "irdai-insurance-products-regulations-2024.txt",
+    "location": "IRDAI (Insurance Products) Regulations 2024, Schedule III, clause 1.6, PDF page 36 (Gazette page 37)",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Insurance+Products%29+Regulations%2C+2024.pdf/eb55db8a-a617-d492-b313-f13cfb11afeb?version=1.2&t=1712320142367&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "ped_waiting_max_36m",
+    "summary": "Waiting period for pre-existing diseases that were disclosed can be at most 36 months of continuous coverage.",
+    "quote": "Waiting period for pre-existing diseases disclosed by the persons to be insured, shall be maximum up to 36 months of continuous coverage under the Health Insurance policy.",
+    "file": "irdai-insurance-products-regulations-2024.txt",
+    "location": "IRDAI (Insurance Products) Regulations 2024, Schedule III, clause 7, PDF page 37 (Gazette page 38)",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Insurance+Products%29+Regulations%2C+2024.pdf/eb55db8a-a617-d492-b313-f13cfb11afeb?version=1.2&t=1712320142367&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "specific_waiting_max_36m",
+    "summary": "Specific-disease waiting period is at most 36 months from the start of the policy (accidents excepted).",
+    "quote": "“Specific waiting period” means a period up to 36 months from the commencement of a health insurance policy during which period specified diseases/treatments (except due to an accident) are not covered.",
+    "file": "irdai-insurance-products-regulations-2024.txt",
+    "location": "IRDAI (Insurance Products) Regulations 2024, Schedule III, clause 1.7, PDF page 36 (Gazette page 37)",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%89%E0%A4%A4%E0%A5%8D%E0%A4%AA%E0%A4%BE%E0%A4%A6%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Insurance+Products%29+Regulations%2C+2024.pdf/eb55db8a-a617-d492-b313-f13cfb11afeb?version=1.2&t=1712320142367&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "renewal_no_denial_for_claims",
+    "summary": "An insurer cannot refuse renewal just because the policyholder made claims earlier.",
+    "quote": "An Insurer shall not deny the renewal on the ground that the policyholder had made a claim (s) in the preceding policy years.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 10(b), PDF page 7",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "cashless_auth_1h",
+    "summary": "Insurer must decide on a cashless authorisation request within one hour.",
+    "quote": "Insurer shall decide on the request for cashless authorization immediately but not more than one hour of receipt of request.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 15(b), PDF page 9",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-07-31",
+    "status": "in_force",
+    "note": "Systems were required by 31 July 2024; the circular itself took effect 29 May 2024."
+  },
+  {
+    "id": "discharge_auth_3h",
+    "summary": "Insurer must give final authorisation within three hours of the hospital's discharge request.",
+    "quote": "Insurer shall grant final authorization within three hours of the receipt of discharge authorization request from the hospital. In no case, the policyholder shall be made to wait to be discharged from the Hospital.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 16(a), PDF page 9",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "discharge_delay_insurer_pays",
+    "summary": "If authorisation is delayed beyond three hours, the extra hospital charge is paid by the insurer from shareholders' funds.",
+    "quote": "If there is any delay beyond three hours, the additional amount if any charged by the hospital shall be borne by the insurer from shareholder’s fund.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 16(b), PDF page 9",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "reimbursement_15_days",
+    "summary": "Non-cashless (reimbursement) claims must be settled within 15 days from submission of the claim.",
+    "quote": "Settlement of claims (other than cashless) shall be settled within fifteen days from submission of claim.",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, health claims para 3(iii)(6), PDF page 31",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force",
+    "note": "Counted from submission of the claim, not explicitly from the last document."
+  },
+  {
+    "id": "late_interest_bank_rate_plus_2",
+    "summary": "If a claim is not settled on time, the insurer must pay interest at bank rate plus 2 percent from the date of intimation to payment, without being asked.",
+    "quote": "In case the claim is not settled within the specified timelines, then the claimant is entitled for interest at bank rate plus 2 percent from the date of receipt of intimation to till the date of payment. Such interest shall be suo-moto paid by the insurers.",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, Section V para 2(ii) (health), PDF page 30",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force"
+  },
+  {
+    "id": "bank_rate_definition",
+    "summary": "Bank Rate means the RBI bank rate on the 1st day of the financial year in which the claim fell due.",
+    "quote": "“Bank Rate” means Bank rate fixed by the Reserve Bank of India (RBI) which is prevalent as on 1 st day of the financial year in which the claim has fallen due.",
+    "file": "irdai-protection-policyholders-regulations-2024.txt",
+    "location": "IRDAI (Protection of Policyholders' Interests, Operations and Allied Matters of Insurers) Regulations 2024, regulation 5(3), PDF page 19",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A4%BE+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3%2C+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%93%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B2%E0%A4%A8+%E0%A4%94%E0%A4%B0+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%A6%E0%A5%8D%E0%A4%A7+%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Protection+of+Policyholder%27s+Interests%2C+operations+and+allied+matters+of+insurers%29+Regulations%2C+2024.pdf/330674c5-0adb-4eb7-a399-95d779246ff8?version=1.2&t=1712320815911&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "repudiation_needs_claims_review_committee",
+    "summary": "No claim can be repudiated without approval of the Product Management Committee or its three-member Claims Review Committee.",
+    "quote": "No claim shall be repudiated without the approval of PMC or a three- member sub-group of PMC called the Claims Review Committee (CRC).",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 17(a), PDF page 9",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "rejection_reasons_in_writing",
+    "summary": "A repudiation or part-rejection must be told to the claimant with full details and reference to the specific policy terms.",
+    "quote": "In case, the claim is repudiated or disallowed partially, details shall be conveyed to the claimant along with full details giving reference to the specific terms and conditions of the policy document.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 17(b), PDF page 9",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "no_rejection_for_delay_or_documents",
+    "summary": "No claim can be rejected or closed for want of documents or for delayed intimation of the claim.",
+    "quote": "No claim shall be rejected or closed for want of documents or for delayed intimation of claim.",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, Section V para 1(ii), PDF page 15",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force",
+    "note": "Stronger than the 'valid reasons' wording we expected: the text has no exception."
+  },
+  {
+    "id": "insurer_collects_documents_from_hospital",
+    "summary": "Insurer or TPA collects the documents from the hospital; the policyholder is not required to submit them.",
+    "quote": "Pursuant to intimation of the claim, Insurers and Third Party Administrators (TPAs) shall collect the required documents from the Hospitals. Policyholder shall not be required to submit the documents.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 17(c), PDF page 9",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "documents_asked_in_one_go",
+    "summary": "Insurer must ask for all needed documents at one go, not piece by piece.",
+    "quote": "Call for all necessary documents as specified in the policy document at one go and avoid calling such documents/information in a piece meal manner;",
+    "file": "irdai-protection-policyholders-regulations-2024.txt",
+    "location": "IRDAI (Protection of Policyholders' Interests, Operations and Allied Matters of Insurers) Regulations 2024, regulation 23(4), PDF page 25",
+    "url": "https://irdai.gov.in/documents/37343/366405/%E0%A4%86%E0%A4%88%E0%A4%86%E0%A4%B0%E0%A4%A1%E0%A5%80%E0%A4%8F%E0%A4%86%E0%A4%88+%28%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A4%BE+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3%2C+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE%E0%A4%95%E0%A4%B0%E0%A5%8D%E0%A4%A4%E0%A4%BE%E0%A4%93%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%9A%E0%A4%BE%E0%A4%B2%E0%A4%A8+%E0%A4%94%E0%A4%B0+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%A6%E0%A5%8D%E0%A4%A7+%E0%A4%95%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%AF%29+%E0%A4%B5%E0%A4%BF%E0%A4%A8%E0%A4%BF%E0%A4%AF%E0%A4%AE%2C+2024+_+IRDAI+%28Protection+of+Policyholder%27s+Interests%2C+operations+and+allied+matters+of+insurers%29+Regulations%2C+2024.pdf/330674c5-0adb-4eb7-a399-95d779246ff8?version=1.2&t=1712320815911&download=true",
+    "in_force_from": "2024-04-01",
+    "status": "in_force"
+  },
+  {
+    "id": "grievance_ack_and_14_days",
+    "summary": "Insurer must acknowledge a complaint immediately and resolve it within 14 days, with reasons and policy references if rejecting.",
+    "quote": "On receipt of a complaint, the complainant will have to be given an acknowledgement immediately. Insurers should provide resolution to the complaint within 14 days along with the reasons for not accepting the complaint with specific reference to the relevant terms and conditions of the policy.",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, Complaints Mechanism para 2(i) (health part), PDF page 33",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force"
+  },
+  {
+    "id": "grievance_bima_bharosa",
+    "summary": "Policyholder can also file the complaint online on IRDAI's Bima Bharosa portal.",
+    "quote": "The policyholder or the claimant also has the option to register the complaint on-line at IRDAl's Bima Bharosa by visiting https://bimabharosa.irdai.gov.in/.",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, Complaints Mechanism para 1 (health part), PDF page 33",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force",
+    "note": "Text layer is OCR; the circular's own 'IRDAI' appears as 'IRDAl' in the .txt."
+  },
+  {
+    "id": "grievance_response_must_name_ombudsman",
+    "summary": "The insurer's grievance reply must give the contact details of the Insurance Ombudsman for escalation.",
+    "quote": "The response letter of the Insurer in any grievance shall include the contact details of concerned insurance ombudsmen where his/her complaint can be escalated in case, the policyholder is not satisfied by the grievance redressal provided by the Insurer.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 19, PDF page 10",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_who_can_complain",
+    "summary": "Anyone with a grievance against an insurer can complain in writing to the Insurance Ombudsman, directly or through legal heirs, nominee or assignee.",
+    "quote": "Any person who has a grievance against an insurer 1 [or insurance broker] may himself or through his legal heirs, nominee or assignee, make a complaint in writing to the Insurance Ombudsman",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(1), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_complain_to_insurer_first",
+    "summary": "You must first make a written, email or online representation to the insurer before going to the Ombudsman.",
+    "quote": "No complaint to the Insurance Ombudsman shall lie unless (a) the complainant 1 [has made a representation in writing or through electronic mail or online through website of the insurer or insurance broker concerned] named in the complaint and—",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(3)(a), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2021-03-02",
+    "status": "in_force",
+    "note": "Online and email representation added by G.S.R. 147(E) of 2.3.2021."
+  },
+  {
+    "id": "ombudsman_insurer_rejected",
+    "summary": "First ground to approach the Ombudsman: the insurer rejected the complaint.",
+    "quote": "either the insurer 1 [or insurance broker, as the case may be,] had rejected the complaint; or",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(3)(a)(i), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2021-03-02",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_no_reply_one_month",
+    "summary": "Second ground: no reply from the insurer within one month of receiving your representation.",
+    "quote": "the complainant had not received any reply within a period of one month after the insurer 1 [or insurance broker, as the case may be,] received his representation; or",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(3)(a)(ii), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force",
+    "note": "The rules say 'one month', not '30 days'."
+  },
+  {
+    "id": "ombudsman_not_satisfied",
+    "summary": "Third ground: you are not satisfied with the insurer's reply.",
+    "quote": "the complainant is not satisfied with the reply given to him by the insurer 1 [or insurance broker, as the case may be.]",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(3)(a)(iii), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_one_year_limit",
+    "summary": "Complaint must be made within one year of the insurer's rejection or unsatisfactory decision, or one month after the insurer fails to reply.",
+    "quote": "The complaint is made within one year— (i) after the order of the insurer 1 [or insurance broker, as the case may be,] rejecting the representation is received; or (ii) after receipt of decision of the insurer 1 [or insurance broker, as the case may be], which is not to the satisfaction of the complainant;",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(3)(b), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_one_month_no_reply_clock",
+    "summary": "If the insurer does not reply, the one-year clock runs from the end of one month after you sent the representation.",
+    "quote": "after expiry of a period of one month from the date of sending the written representation to the insurer 1 [or insurance broker, as the case may be,] if the insurer or 1 [ insurance broker, as the case may be], named fails to furnish reply to the complainant.",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(3)(b)(iii), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_delay_condonation",
+    "summary": "The Ombudsman can condone a delay after hearing the insurer's objections and recording reasons.",
+    "quote": "The Ombudsman shall be empowered to condone the delay in such cases as he may consider necessary, after calling for objections of the insurer or insurance broker, as the case may be, against the proposed condonation and after recording reasons for condoning the delay",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(4), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_no_parallel_proceedings",
+    "summary": "No Ombudsman complaint if the same matter is pending or decided in a court, consumer forum or arbitration.",
+    "quote": "No complaint before the Insurance Ombudsman shall be maintainable on the same subject matter on which proceedings are pending before or disposed of by any court or consumer forum or arbitrator.",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 14(5), PDF page 9",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_covers_claim_repudiation",
+    "summary": "Ombudsman can hear complaints about delay in claim settlement and partial or total repudiation of claims by a health insurer.",
+    "quote": "(b) any partial or total repudiation of claims by the life insurer, General insurer or the health insurer;",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 13(1)(b), PDF page 8",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_award_cap_50_lakh",
+    "summary": "Ombudsman cannot award more than Rs 50 lakh (including relevant expenses), nor more than the direct loss.",
+    "quote": "not award compensation exceeding rupees 3 [fifty] lakhs (including relevant expenses, if any).",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 17(3) proviso (ii), PDF page 11",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2023-11-09",
+    "status": "in_force",
+    "note": "Raised to fifty lakh by G.S.R. 828(E) of 9.11.2023. The cap is on the award, not on the claim value in the rules; the 2024 Master Circular on Protection of Policyholders' Interests repeats it as a claim-amount limit (see ombudsman_claim_limit_circular)."
+  },
+  {
+    "id": "ombudsman_claim_limit_circular",
+    "summary": "Per the 2024 Master Circular, a complaint can be escalated to the Ombudsman where the claim amount is up to Rs 50 lakhs.",
+    "quote": "Insurance Ombudsman of concerned jurisdiction, in case the claim amount i s up to Rs. 50 lakhs.",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, Complaints Mechanism para 3(i) (health part), PDF page 34",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force",
+    "note": "Text layer is OCR with stray spaces and characters; the quote is copied as it appears in the .txt."
+  },
+  {
+    "id": "ombudsman_free_of_charge",
+    "summary": "Taking a complaint to the Insurance Ombudsman is free; it can be done in person, online at cioins.co.in, or by post or email.",
+    "quote": "The policyholder has option to take up the matter before insurance ombudsman of competent jurisdiction without any charge/ fee",
+    "file": "irdai-master-circular-protection-policyholders-2024.txt",
+    "location": "Master Circular on Protection of Policyholders' Interests 2024, Complaints Mechanism para 3(ii) (health part), PDF page 34",
+    "url": "https://irdai.gov.in/documents/37343/0/%E0%A4%AA%E0%A4%BE%E0%A4%B2%E0%A4%BF%E0%A4%B8%E0%A5%80%E0%A4%A7%E0%A4%BE%E0%A4%B0%E0%A4%95%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B9%E0%A4%BF%E0%A4%A4%E0%A5%8B%E0%A4%82+%E0%A4%95%E0%A5%87+%E0%A4%B8%E0%A4%82%E0%A4%B0%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%A3+%E0%A4%B8%E0%A4%82%E0%A4%AC%E0%A4%82%E0%A4%A7%E0%A5%80+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0%2C+2024-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Protection+of+Policyholders%27+interests+2024-+English.pdf/12da35c0-254f-8ae1-2d55-44ba7ac351f6?version=1.0&t=1737118573306&download=true",
+    "in_force_from": "2024-09-05",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_award_3_months",
+    "summary": "Ombudsman must finish and pass the award within three months of receiving all requirements from the complainant.",
+    "quote": "The Ombudsman shall finalise its findings and pass an award within a period of three months of the receipt of all requirements from the complainant.",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 17(4), PDF page 11",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_insurer_comply_30_days",
+    "summary": "Insurer must comply with the award within thirty days of receiving it and report compliance.",
+    "quote": "shall comply with the award within thirty days of the receipt of the award and intimate compliance of the same to the Ombudsman",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 17(6), PDF page 11",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_award_binding",
+    "summary": "The Ombudsman's award binds the insurer.",
+    "quote": "The award of Insurance Ombudsman shall be binding on the insurers",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 17(8), PDF page 11",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_award_interest",
+    "summary": "Complainant gets interest from the date the claim should have been settled until the date the awarded amount is paid.",
+    "quote": "The complainant shall be entitled to such interest at a rate per annum as specified in the regulations, framed under the Insurance Regulatory and Development Authority of India Act, 1999, from the date the claim ought to have been settled under the regulations, till the date of payment of the amount awarded by the Ombudsman.",
+    "file": "insurance-ombudsman-rules-2017-amended-2023.txt",
+    "location": "Insurance Ombudsman Rules 2017 (as amended to 9.11.2023), rule 17(7), PDF page 11",
+    "url": "https://cioins.co.in:8082/notification/Insurance%20Ombudsman%20Rules,%202017(%20as%20amended%20till%2009.11.2023).pdf",
+    "in_force_from": "2017-04-25",
+    "status": "in_force"
+  },
+  {
+    "id": "ombudsman_award_penalty_5000_per_day",
+    "summary": "If the insurer does not honour the Ombudsman award within 30 days, a penalty of Rs 5000 per day is payable to the complainant, on top of penal interest.",
+    "quote": "The Insurer is required to comply with the award of the Insurance Ombudsman within 30 days of receipt of award by the Insurer. In case the Insurer does not honour the ombudsman award, a penalty of Rs. 5000/- per day shall be payable to the complainant. Such penalty is in addition to the penal interest liable to be paid by the Insurer under The Insurance Ombudsman Rules, 2017.",
+    "file": "irdai-master-circular-health-2024.txt",
+    "location": "Master Circular on Health Insurance Business, Chapter I, para 20, PDF page 10",
+    "url": "https://irdai.gov.in/documents/37343/991022/%E0%A4%B8%E0%A5%8D%E0%A4%B5%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%A5%E0%A5%8D%E0%A4%AF+%E0%A4%AC%E0%A5%80%E0%A4%AE%E0%A4%BE+%E0%A4%B5%E0%A5%8D%E0%A4%AF%E0%A4%B5%E0%A4%B8%E0%A4%BE%E0%A4%AF+%E0%A4%AA%E0%A4%B0+%E0%A4%AE%E0%A4%BE%E0%A4%B8%E0%A5%8D%E0%A4%9F%E0%A4%B0+%E0%A4%AA%E0%A4%B0%E0%A4%BF%E0%A4%AA%E0%A4%A4%E0%A5%8D%E0%A4%B0-%E0%A4%85%E0%A4%82%E0%A4%97%E0%A5%8D%E0%A4%B0%E0%A5%87%E0%A4%9C%E0%A5%80+_+Master+Circular+on+Health+Insurance+Business+-English.pdf/08a32828-dc1d-116f-0549-6db86d448651?version=1.0&t=1719833433399&download=true",
+    "in_force_from": "2024-05-29",
+    "status": "in_force"
+  },
+  {
+    "id": "history_moratorium_8y_2020",
+    "summary": "HISTORY: the 2020 standardisation circular set an 8-year moratorium. Replaced by 60 months from 2024.",
+    "quote": "After completion of eight continuous years under the policy no look back to be applied. This period of eight years is called as moratorium period.",
+    "file": "irdai-master-circular-standardization-health-2020.txt",
+    "location": "Master Circular on Standardization of Health Insurance Products (22 July 2020), Annexure on Moratorium clause 3, PDF page 107",
+    "url": "https://irdai.gov.in/documents/37343/366029/Master+Circular+on+Standardization+of+Health+Insurance+Products.pdf/40548736-71a8-1b76-e28d-0df899407e1e?version=1.2&t=1665033878433&download=true",
+    "in_force_from": "2020-07-22",
+    "status": "superseded",
+    "note": "Repealed by Annexure 6 of the 2024 Master Circular on Health Insurance Business."
+  },
+  {
+    "id": "history_ped_48m_2020",
+    "summary": "HISTORY: the 2020 circular defined pre-existing disease with a 48-month look-back. Replaced by 36 months from 2024.",
+    "quote": "Pre-existing Disease means any condition, ailment, injury or disease: a) That is/are diagnosed by a physician within 48 months prior to the effective",
+    "file": "irdai-master-circular-standardization-health-2020.txt",
+    "location": "Master Circular on Standardization of Health Insurance Products (22 July 2020), definition 33, PDF page 10",
+    "url": "https://irdai.gov.in/documents/37343/366029/Master+Circular+on+Standardization+of+Health+Insurance+Products.pdf/40548736-71a8-1b76-e28d-0df899407e1e?version=1.2&t=1665033878433&download=true",
+    "in_force_from": "2020-07-22",
+    "status": "superseded"
+  }
+]

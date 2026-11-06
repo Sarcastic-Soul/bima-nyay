@@ -14,9 +14,9 @@ config({ path: ".env.local" });
 const key = process.env.GEMINI_API_KEY;
 if (!key) throw new Error("GEMINI_API_KEY missing in .env.local");
 const ai = new GoogleGenAI({ apiKey: key });
-const MODEL = process.env.GEMINI_LABEL_MODEL ?? "gemini-2.5-flash-lite";
-const BATCH = 8;
-const RPM = Number(process.env.GEMINI_RPM ?? 12);
+const MODEL = process.env.GEMINI_LABEL_MODEL ?? "gemini-3.5-flash-lite";
+const BATCH = Number(process.env.GEMINI_BATCH ?? 20);
+const RPM = Number(process.env.GEMINI_RPM ?? 6);
 
 const IN = "data/processed/gic-awards.jsonl";
 const OUT = "data/processed/gic-labels.jsonl";
