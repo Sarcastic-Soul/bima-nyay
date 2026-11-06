@@ -44,3 +44,4 @@ next-env.d.ts
 # raw corpus PDFs (re-download with scripts/download-corpus.sh)
 data/raw/**/*.pdf
 sources/irdai-master-circular-protection-policyholders-2024.pdf
+design-options/

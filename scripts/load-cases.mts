@@ -19,18 +19,31 @@ const read = (p: string) => readFileSync(p, "utf8").trim().split("\n").filter(Bo
 const awards = new Map(read("data/processed/gic-awards.jsonl").map((a: any) => [a.id, a]));
 const labels = read("data/processed/gic-labels.jsonl").filter((l: any) => l.is_health_claim && awards.has(l.id));
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const have = new Set((await sql.query("select id from cases where embedding is not null")).map((r: any) => r.id));
 const todo = labels.filter((l: any) => !have.has(`gic-${l.id}`));
 console.log(`${labels.length} health awards labelled, ${todo.length} to load`);
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 for (let i = 0; i < todo.length; i += 50) {
   const batch = todo.slice(i, i + 50);
-  const res = await ai.models.embedContent({
-    model: EMBED_MODEL,
-    contents: batch.map((l: any) => `${l.reason}: ${l.facts}`),
-    config: { outputDimensionality: EMBED_DIM, taskType: "SEMANTIC_SIMILARITY" },
-  });
+  let res;
+  for (let attempt = 0; ; attempt++) {
+    try {
+      res = await ai.models.embedContent({
+        model: EMBED_MODEL,
+        contents: batch.map((l: any) => `${l.reason}: ${l.facts}`),
+        config: { outputDimensionality: EMBED_DIM, taskType: "SEMANTIC_SIMILARITY" },
+      });
+      break;
+    } catch (e) {
+      const msg = String((e as Error).message);
+      if (attempt >= 5 || !/429|503/.test(msg)) throw e;
+      if (/per day|PerDay/i.test(msg)) throw new Error("Daily embedding quota reached; re-run tomorrow.");
+      const wait = Number(msg.match(/retry in ([\d.]+)s/)?.[1] ?? 30) * 1000 + 2000;
+      console.warn(`rate limited, waiting ${Math.round(wait / 1000)}s`);
+      await sleep(wait);
+    }
+  }
   const vecs = res.embeddings!.map((e) => e.values!);
   for (const [k, l] of batch.entries()) {
     const a: any = awards.get(l.id);
@@ -49,5 +62,5 @@ for (let i = 0; i < todo.length; i += 50) {
     );
   }
   console.log(`${Math.min(i + 50, todo.length)}/${todo.length}`);
-  await sleep(1000);
+  await sleep(31000); // free tier: 100 embeddings per minute
 }

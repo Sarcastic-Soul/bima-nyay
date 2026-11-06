@@ -1,0 +1,23 @@
+{
+  "insurer": "Anantam Mutual Health Insurance Ltd.",
+  "policyNumber": "ANT/HLT/24/0903355",
+  "claimNumber": "ANT/CLM/25/227468",
+  "patientName": "Mr. Dinesh Kumar Rathore",
+  "letterDate": "2025-08-18",
+  "coverStartDate": "2024-03-05",
+  "policyStartDate": "2025-03-05",
+  "admissionDate": "2025-07-22",
+  "claimSubmittedDate": "2025-07-28",
+  "claimAmount": 58000,
+  "approvedAmount": 0,
+  "claimType": "reimbursement",
+  "diagnosis": "Senile cataract, right eye - phacoemulsification with IOL",
+  "reasonText": "Cataract surgery is covered under your policy only after a specific waiting period of 24 months of continuous cover. Your cover began on 05/03/2024, so on the date of admission (22/07/2025) you had completed 16 months and 17 days. The waiting period for cataract ends on 04/03/2026. The claim is therefore not payable at this time.",
+  "reasonId": "waiting_period",
+  "clausesCited": [
+    "Clause 4.3"
+  ],
+  "waitingMonthsStated": 24,
+  "fraudAlleged": false,
+  "accident": false
+}

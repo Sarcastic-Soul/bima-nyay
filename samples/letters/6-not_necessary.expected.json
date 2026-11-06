@@ -1,0 +1,21 @@
+{
+  "insurer": "निर्भय सुरक्षा स्वास्थ्य बीमा कंपनी लिमिटेड",
+  "policyNumber": "NSB/HLT/23/0214498",
+  "claimNumber": "NSB/CLM/25/076512",
+  "patientName": "श्रीमती गीता देवी चौहान",
+  "letterDate": "2025-09-20",
+  "coverStartDate": "2023-02-14",
+  "policyStartDate": "2023-02-14",
+  "admissionDate": "2025-09-11",
+  "claimSubmittedDate": "2025-09-16",
+  "claimAmount": 38200,
+  "approvedAmount": 0,
+  "claimType": "reimbursement",
+  "diagnosis": "तीव्र ज्वर एवं निर्जलीकरण (Acute febrile illness with dehydration)",
+  "reasonText": "आपके दस्तावेज़ों की समीक्षा हमारे चिकित्सा सलाहकार ने की है। रिकॉर्ड के अनुसार भर्ती के समय मरीज़ को हल्का बुखार (100.2 °F) था, रक्तचाप व ऑक्सीजन स्तर सामान्य थे और पूरे समय केवल सामान्य दवाइयाँ तथा कुछ घंटे का IV तरल दिया गया। अतः अस्पताल में भर्ती चिकित्सकीय रूप से आवश्यक नहीं थी और यह उपचार OPD (बाह्य रोगी विभाग) में किया जा सकता था। इसी कारण आपका दावा अस्वीकृत किया जाता है।",
+  "reasonId": "not_necessary",
+  "clausesCited": [],
+  "waitingMonthsStated": null,
+  "fraudAlleged": false,
+  "accident": false
+}
