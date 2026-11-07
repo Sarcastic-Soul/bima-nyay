@@ -1,0 +1,23 @@
+{
+  "insurer": "Jeevan Rekha Health Insurance Co. Ltd.",
+  "policyNumber": "JRH-IND-24-0156620",
+  "claimNumber": "CP/PA/25/448120",
+  "patientName": "Mr. Gurpreet Singh Sandhu",
+  "letterDate": "2025-09-05",
+  "coverStartDate": "2024-06-15",
+  "policyStartDate": "2024-06-15",
+  "admissionDate": "2025-09-02",
+  "claimSubmittedDate": "2025-09-02",
+  "claimAmount": 214800,
+  "approvedAmount": 0,
+  "claimType": "cashless",
+  "diagnosis": "Type 2 diabetes mellitus with diabetic foot infection (Wagner Grade 3)",
+  "reasonText": "As per the medical records submitted, Type 2 diabetes mellitus was first diagnosed in 2018 and you have been on oral anti-diabetic medicines since then. The present admission is a complication of this condition. Your policy commenced on 15/06/2024 and only 14 months of cover have been completed. The treatment is therefore not payable as it falls within the 48 months waiting period applicable to pre-existing diseases.",
+  "reasonId": "ped",
+  "clausesCited": [
+    "Clause 4.2"
+  ],
+  "waitingMonthsStated": 48,
+  "fraudAlleged": false,
+  "accident": false
+}

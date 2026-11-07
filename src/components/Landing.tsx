@@ -15,14 +15,15 @@ export function Landing({
   t, lang, busy, error, onFile, onManual,
 }: {
   t: Dict; lang: "en" | "hi"; busy: boolean; error?: string;
-  onFile: (f: File, sample?: boolean) => void; onManual: () => void;
+  onFile: (f: File, sample?: boolean, saved?: unknown) => void; onManual: () => void;
 }) {
   const input = useRef<HTMLInputElement>(null);
   const [drag, setDrag] = useState(false);
 
   async function pickSample(file: string) {
     const blob = await fetch(`/samples/${file}`).then((r) => r.blob());
-    onFile(new File([blob], file, { type: "image/png" }), true);
+    const saved = await fetch(`/samples/${file.replace(/\.png$/, ".json")}`).then((r) => (r.ok ? r.json() : undefined)).catch(() => undefined);
+    onFile(new File([blob], file, { type: "image/png" }), true, saved);
   }
 
   return (

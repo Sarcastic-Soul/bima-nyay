@@ -1,0 +1,23 @@
+{
+  "insurer": "Vistar Shield General Insurance Co. Ltd.",
+  "policyNumber": "VSG/HLT/21/0558013",
+  "claimNumber": "LCM/VSG/25/119204",
+  "patientName": "Mrs. Sarla Bhattacharjee",
+  "letterDate": "2025-05-06",
+  "coverStartDate": "2021-08-20",
+  "policyStartDate": "2021-08-20",
+  "admissionDate": "2025-04-14",
+  "claimSubmittedDate": "2025-04-21",
+  "claimAmount": 248600,
+  "approvedAmount": 164600,
+  "claimType": "cashless",
+  "diagnosis": "Lumbar disc prolapse L4-L5, microdiscectomy",
+  "reasonText": "The room rent limit under your policy is 1% of the sum insured per day, i.e. Rs 5,000/- per day. You occupied a Deluxe room charged at Rs 9,000/- per day. As the room chosen is costlier than the entitled room, the insurer has applied a proportionate deduction of 4/9 (44.44%) on room-rent-linked charges such as surgeon, anaesthetist, OT and nursing charges. The amount of Rs 1,64,600/- is admitted against the claimed amount of Rs 2,48,600/-.",
+  "reasonId": "room_rent",
+  "clausesCited": [
+    "Clause 3.7"
+  ],
+  "waitingMonthsStated": null,
+  "fraudAlleged": false,
+  "accident": false
+}

@@ -1,0 +1,23 @@
+{
+  "insurer": "Nakshatra National Assurance Co. Ltd.",
+  "policyNumber": "NNA/HEA/22/0771204",
+  "claimNumber": "NNA/RMB/25/031772",
+  "patientName": "Mrs. Farzana Sheikh",
+  "letterDate": "2025-08-12",
+  "coverStartDate": "2022-11-01",
+  "policyStartDate": "2024-11-01",
+  "admissionDate": "2025-06-10",
+  "claimSubmittedDate": "2025-07-28",
+  "claimAmount": 94300,
+  "approvedAmount": 0,
+  "claimType": "reimbursement",
+  "diagnosis": "Symptomatic cholelithiasis - lap. cholecystectomy",
+  "reasonText": "The claim documents were received by us on 28/07/2025, i.e. 45 days after the date of discharge (13/06/2025). Intimation of the hospitalisation was also given only on 02/07/2025. Despite our reminder letters dated 09/07/2025 and 18/07/2025, the original final bill and the investigation reports were not submitted within the time allowed. The claim is therefore repudiated for non-submission of documents within 30 days of discharge and late intimation.",
+  "reasonId": "documents",
+  "clausesCited": [
+    "Clause 5.4"
+  ],
+  "waitingMonthsStated": null,
+  "fraudAlleged": false,
+  "accident": false
+}

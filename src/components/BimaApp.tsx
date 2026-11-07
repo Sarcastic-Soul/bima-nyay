@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { ArrowCounterClockwise, GithubLogo } from "@phosphor-icons/react";
 import { DICT, type Lang } from "@/lib/i18n";
-import type { LetterFields } from "@/lib/letter";
+import { LetterFields as LetterFieldsSchema, type LetterFields } from "@/lib/letter";
 import { Landing } from "./Landing";
 import { ConfirmForm } from "./ConfirmForm";
 import { Report } from "./Report";
@@ -30,6 +30,7 @@ export function BimaApp() {
   const [situation, setSituation] = useState<Situation>({ state: "", district: "", grievanceSentDate: "", grievanceReplyDate: "" });
   const [report, setReport] = useState<ReportState>({ steps: [], done: false });
   const [today, setToday] = useState("");
+  const [savedNote, setSavedNote] = useState(false);
 
   useEffect(() => {
     try { const l = localStorage.getItem("bima-nyay:lang"); if (l === "hi" || l === "en") setLang(l); } catch {}
@@ -40,9 +41,20 @@ export function BimaApp() {
   }, [lang]);
   useEffect(() => { window.scrollTo({ top: 0 }); }, [stage]);
 
-  async function onFile(file: File, sample = false) {
+  async function onFile(file: File, sample = false, saved?: unknown) {
     setBusy(true);
     setError(undefined);
+    setSavedNote(false);
+    // Sample letters are made up and come with known answers. If the reader is down, use those answers and say so.
+    const loadSaved = () => {
+      const ok = sample ? LetterFieldsSchema.safeParse(saved) : null;
+      if (!ok?.success) return false;
+      setFields(ok.data);
+      setSavedNote(true);
+      setStage("confirm");
+      track("sample_used", lang, ok.data.reasonId);
+      return true;
+    };
     try {
       const body = new FormData();
       body.append("file", file);
@@ -52,9 +64,9 @@ export function BimaApp() {
         setFields(j.fields);
         setStage("confirm");
         track(sample ? "sample_used" : "letter_read", lang, j.fields.reasonId);
-      } else setError(res.status === 503 || res.status === 429 ? t.busy : t.readFail);
+      } else if (!loadSaved()) setError(res.status === 503 || res.status === 429 ? t.busy : t.readFail);
     } catch {
-      setError(t.busy);
+      if (!loadSaved()) setError(t.busy);
     } finally {
       setBusy(false);
     }
@@ -113,6 +125,7 @@ export function BimaApp() {
     setFields(EMPTY);
     setReport({ steps: [], done: false });
     setError(undefined);
+    setSavedNote(false);
   }
 
   return (
@@ -131,6 +144,9 @@ export function BimaApp() {
         {stage === "upload" && (
           <Landing t={t} lang={lang} busy={busy} error={error} onFile={onFile}
             onManual={() => { setFields(EMPTY); setStage("confirm"); }} />
+        )}
+        {stage === "confirm" && savedNote && (
+          <p role="status" className="mt-6 border-l-4 border-accent bg-accent-soft px-4 py-3 text-[16px]">{t.sampleSaved}</p>
         )}
         {stage === "confirm" && (
           <ConfirmForm t={t} lang={lang} fields={fields} situation={situation} onFields={setFields}

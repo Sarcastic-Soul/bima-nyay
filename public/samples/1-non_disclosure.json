@@ -1,0 +1,23 @@
+{
+  "insurer": "Suraksha Kavach General Insurance Co. Ltd.",
+  "policyNumber": "SKG/HLT/19/0042871",
+  "claimNumber": "SKG/CLM/25/0098314",
+  "patientName": "Mr. Ashok Raghunath Patil",
+  "letterDate": "2025-10-06",
+  "coverStartDate": "2019-04-12",
+  "policyStartDate": "2025-04-12",
+  "admissionDate": "2025-08-18",
+  "claimSubmittedDate": "2025-09-02",
+  "claimAmount": 386450,
+  "approvedAmount": 0,
+  "claimType": "reimbursement",
+  "diagnosis": "Acute coronary syndrome (NSTEMI) - coronary angioplasty with stenting",
+  "reasonText": "The indoor case papers and the discharge summary of the hospital record that you are a known case of hypertension for the last 9 years and have been taking Telmisartan 40 mg daily. This condition was not disclosed in the proposal form dated 12/04/2019, where the question on hypertension and heart disease was answered \"No\". The Company considers this a non-disclosure of a material fact.",
+  "reasonId": "non_disclosure",
+  "clausesCited": [
+    "Clause 6.2"
+  ],
+  "waitingMonthsStated": null,
+  "fraudAlleged": false,
+  "accident": false
+}
