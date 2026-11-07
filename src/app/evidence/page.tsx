@@ -125,7 +125,7 @@ export default function Evidence() {
             </p>
           </section>
         ) : (
-          <p className="mt-10 text-muted">Replay results not generated yet. Run <code>scripts/replay.mts</code>.</p>
+          <p className="mt-10 max-w-[680px] text-muted">The replay is being re-run. Our first run could see how each past case ended while searching, which made it look better than it should. We fixed that (see <code>src/lib/cases/neutral.ts</code>) and will publish the new numbers here. Script: <code>scripts/replay.mts</code>.</p>
         )}
 
         {x && (
