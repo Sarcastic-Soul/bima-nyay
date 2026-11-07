@@ -9,6 +9,8 @@ A family's health-insurance claim is rejected or cut. They get a letter they oft
 - the deadlines for the insurer grievance and the Ombudsman complaint, and which Ombudsman office covers their state;
 - a grievance letter to the insurer and an Ombudsman complaint they can copy, print or share.
 
+How big is it: in 2023-24, 31,490 health-insurance complaints reached the Insurance Ombudsman, and 95% of those heard were about rejected or cut claims. Ombudsmen ordered or recommended about Rs 148 crore (14,792.79 lakh) for complainants in 16,368 cases. Source: Council for Insurance Ombudsmen annual report 2023-24, quoted in `sources/ombudsman-annual-reports.md`. These count only people who got as far as an Ombudsman.
+
 It gives information, not legal advice. It never files anything for the user and never promises an outcome.
 
 Built for the Code for a Billion hackathon, Financial Inclusion track.

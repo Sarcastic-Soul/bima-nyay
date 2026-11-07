@@ -18,6 +18,8 @@ Health insurance table (Complaints Received & Disposal statement, 01.04.2023 to 
 
 Rule 13(1)(b) is "any partial or total repudiation of claims by an insurer".
 
+Statement H5 (health insurance, recommendations and awards in favour of complainants), "Total" row: 10,135 recommendations worth 8,917.53 lakh; 6,233 awards worth 5,875.26 lakh; combined 16,368 cases and 14,792.79 lakh (about Rs 148 crore; 1 crore = 100 lakh).
+
 ## Annual Report 2024-25
 
 URL: https://cioins.co.in/annualreports/AnnualReport2024-2025.pdf (scanned images, so this line was read by OCR (tesseract) and should be checked against the PDF)

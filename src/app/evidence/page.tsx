@@ -121,7 +121,7 @@ export default function Evidence() {
             </table>
             <p className="mt-4 text-[15px] text-muted">
               Across all replayed decisions, the complainant got some or all of the money back in {pct(r.favourableActual)} of
-              cases. Many people never complain at all, so this is the part of the problem the app is built to change.
+              cases. These are only the cases that reached an Ombudsman.
             </p>
           </section>
         ) : (

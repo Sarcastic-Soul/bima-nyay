@@ -34,6 +34,7 @@ export function Landing({
             {t.heroA} <em className="text-accent">{t.heroB}</em>
           </h1>
           <p className="mt-5 max-w-[32em] text-[19px] text-muted md:text-[20px]">{t.lede}</p>
+          <p className="mt-4 max-w-[34em] border-l-4 border-accent pl-4 text-[16px]">{t.scale} <span className="text-muted">{t.scaleSource}</span></p>
 
           <div
             onDragOver={(e) => { e.preventDefault(); setDrag(true); }}
