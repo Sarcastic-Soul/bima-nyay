@@ -20,8 +20,11 @@ create table if not exists cases (
   source_ref      text,            -- book id / case number for audit
   raw_text        text not null,
   label_source    text,            -- 'gemini' or 'human'
-  embedding       vector(768)
+  embedding       vector(1024),
+  embed_model     text             -- model that made `embedding`; vectors from different models never mix
 );
+
+alter table cases add column if not exists embed_model text;
 
 create index if not exists cases_reason_idx on cases (reason);
 create index if not exists cases_year_idx on cases (year);

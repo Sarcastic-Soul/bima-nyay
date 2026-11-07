@@ -1,10 +1,9 @@
 /**
- * The Bima Nyay agent. Gemini decides which tools to call and writes the
+ * The Bima Nyay agent. The chat model decides which tools to call and writes the
  * plain-language summary; every fact it can state comes from a tool:
  * rules and dates are deterministic code, past cases come from the database.
  */
-import { Type, type Content, type FunctionDeclaration } from "@google/genai";
-import { gemini, MODEL, withRetry } from "../gemini";
+import { chat, type ChatMessage, type ToolDef } from "../llm";
 import type { LetterFields } from "../letter";
 import { checkRules, type Finding } from "../rules/check";
 import { computeDeadlines, type DeadlineStep } from "../deadlines";
@@ -43,39 +42,29 @@ export type ToolDeps = {
   search?: typeof searchSimilar;
 };
 
-const TOOLS: FunctionDeclaration[] = [
-  {
-    name: "check_rules",
-    description: "Check the rejection against IRDAI rules (moratorium, waiting periods, documents, letter requirements). Returns findings with rule citations.",
-    parameters: { type: Type.OBJECT, properties: {} },
-  },
-  {
-    name: "find_similar_cases",
-    description:
-      "Search ~4,000 past Insurance Ombudsman decisions for cases like this one and count how they ended. Write facts_summary as a neutral 1-3 sentence description of the medical facts and the insurer's ground, no names.",
-    parameters: {
-      type: Type.OBJECT,
-      properties: {
-        facts_summary: { type: Type.STRING },
-        same_reason_only: { type: Type.BOOLEAN, description: "true to restrict to the same rejection reason (default)" },
-      },
-      required: ["facts_summary"],
+const fn = (name: string, description: string, properties: object = {}, required: string[] = []): ToolDef => ({
+  type: "function",
+  function: { name, description, parameters: { type: "object", properties, required } },
+});
+
+const TOOLS: ToolDef[] = [
+  fn("check_rules", "Check the rejection against IRDAI rules (moratorium, waiting periods, documents, letter requirements). Returns findings with rule citations."),
+  fn(
+    "find_similar_cases",
+    "Search ~4,000 past Insurance Ombudsman decisions for cases like this one and count how they ended. Write facts_summary as a neutral 1-3 sentence description of the medical facts and the insurer's ground, no names.",
+    {
+      facts_summary: { type: "string" },
+      same_reason_only: { type: "boolean", description: "true to restrict to the same rejection reason (default)" },
     },
-  },
-  {
-    name: "compute_deadlines",
-    description: "Work out the grievance and Ombudsman deadlines from the dates known so far.",
-    parameters: { type: Type.OBJECT, properties: {} },
-  },
-  {
-    name: "find_ombudsman_office",
-    description: "Find which Insurance Ombudsman office handles the user's area.",
-    parameters: {
-      type: Type.OBJECT,
-      properties: { state: { type: Type.STRING }, district: { type: Type.STRING } },
-      required: ["state"],
-    },
-  },
+    ["facts_summary"],
+  ),
+  fn("compute_deadlines", "Work out the grievance and Ombudsman deadlines from the dates known so far."),
+  fn(
+    "find_ombudsman_office",
+    "Find which Insurance Ombudsman office handles the user's area.",
+    { state: { type: "string" }, district: { type: "string" } },
+    ["state"],
+  ),
 ];
 
 const SYSTEM = `You help an Indian policyholder whose health insurance claim was rejected. You are not a lawyer; give information, not legal advice.
@@ -111,7 +100,10 @@ function parseSummary(text: string): Summary | null {
 
 export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGenerator<AgentEvent> {
   const search = deps.search ?? searchSimilar;
-  const contents: Content[] = [{ role: "user", parts: [{ text: describe(input.fields, input) }] }];
+  const messages: ChatMessage[] = [
+    { role: "system", content: SYSTEM },
+    { role: "user", content: describe(input.fields, input) },
+  ];
 
   async function callTool(name: string, args: Record<string, unknown>): Promise<{ result: unknown; event?: AgentEvent }> {
     switch (name) {
@@ -155,18 +147,10 @@ export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGe
   }
 
   let askedForJson = false;
-  for (let turn = 0; turn < 5; turn++) {
-    const res = await withRetry(() =>
-      gemini().models.generateContent({
-        model: MODEL,
-        contents,
-        config: { systemInstruction: SYSTEM, tools: [{ functionDeclarations: TOOLS }], temperature: 0.2 },
-      }),
-    );
-    const content = res.candidates?.[0]?.content;
-    const calls = res.functionCalls ?? [];
-    if (!calls.length) {
-      const summary = parseSummary(res.text ?? "");
+  for (let turn = 0; turn < 6; turn++) {
+    const res = await chat({ messages, tools: TOOLS, temperature: 0.2 });
+    if (!res.toolCalls.length) {
+      const summary = parseSummary(res.content);
       if (summary) {
         yield { type: "summary", summary };
         return;
@@ -174,24 +158,26 @@ export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGe
       // Model ended without the JSON: ask once more, then give up.
       if (askedForJson) break;
       askedForJson = true;
-      if (content?.parts?.length) contents.push(content);
-      contents.push({ role: "user", parts: [{ text: "Now reply with only the JSON object described in your instructions." }] });
+      messages.push(res.message, { role: "user", content: "Now reply with only the JSON object described in your instructions." });
       continue;
     }
-    if (content) contents.push(content);
-    const parts = [];
-    for (const c of calls) {
-      const args = (c.args ?? {}) as Record<string, unknown>;
-      yield { type: "tool", name: c.name!, args };
+    messages.push(res.message);
+    for (const c of res.toolCalls) {
+      let args: Record<string, unknown> = {};
       try {
-        const { result, event } = await callTool(c.name!, args);
+        args = JSON.parse(c.function.arguments || "{}");
+      } catch {}
+      yield { type: "tool", name: c.function.name, args };
+      let content: string;
+      try {
+        const { result, event } = await callTool(c.function.name, args);
         if (event) yield event;
-        parts.push({ functionResponse: { id: c.id, name: c.name!, response: { result } } });
+        content = JSON.stringify(result);
       } catch (e) {
-        parts.push({ functionResponse: { id: c.id, name: c.name!, response: { error: (e as Error).message } } });
+        content = JSON.stringify({ error: (e as Error).message });
       }
+      messages.push({ role: "tool", tool_call_id: c.id, content });
     }
-    contents.push({ role: "user", parts });
   }
   yield { type: "error", message: "The assistant could not finish the summary." };
 }

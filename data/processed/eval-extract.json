@@ -1,0 +1,553 @@
+{
+ "ranAt": "2026-11-06T20:37:36.636Z",
+ "ok": 73,
+ "total": 78,
+ "rows": [
+  {
+   "sample": "1-non_disclosure",
+   "field": "policyNumber",
+   "expected": "SKG/HLT/19/0042871",
+   "got": "SKG/HLT/19/0042871",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "claimNumber",
+   "expected": "SKG/CLM/25/0098314",
+   "got": "SKG/CLM/25/0098314",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "letterDate",
+   "expected": "2025-10-06",
+   "got": "2025-10-06",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "coverStartDate",
+   "expected": "2019-04-12",
+   "got": "2019-04-12",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "policyStartDate",
+   "expected": "2025-04-12",
+   "got": "2025-04-12",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "admissionDate",
+   "expected": "2025-08-18",
+   "got": "2025-08-18",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "claimSubmittedDate",
+   "expected": "2025-09-02",
+   "got": "2025-09-02",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "claimAmount",
+   "expected": 386450,
+   "got": 386450,
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "approvedAmount",
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "claimType",
+   "expected": "reimbursement",
+   "got": "reimbursement",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "reasonId",
+   "expected": "non_disclosure",
+   "got": "non_disclosure",
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "waitingMonthsStated",
+   "expected": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "sample": "1-non_disclosure",
+   "field": "fraudAlleged",
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "policyNumber",
+   "expected": "JRH-IND-24-0156620",
+   "got": "JRH-IND-24-0156620",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "claimNumber",
+   "expected": "CP/PA/25/448120",
+   "got": "CP/PA/25/448120",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "letterDate",
+   "expected": "2025-09-05",
+   "got": "2025-09-05",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "coverStartDate",
+   "expected": "2024-06-15",
+   "got": "2024-06-15",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "policyStartDate",
+   "expected": "2024-06-15",
+   "got": "2025-06-15",
+   "ok": false
+  },
+  {
+   "sample": "2-ped",
+   "field": "admissionDate",
+   "expected": "2025-09-02",
+   "got": "2025-09-02",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "claimSubmittedDate",
+   "expected": "2025-09-02",
+   "got": "2025-09-02",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "claimAmount",
+   "expected": 214800,
+   "got": 214800,
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "approvedAmount",
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "claimType",
+   "expected": "cashless",
+   "got": "cashless",
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "reasonId",
+   "expected": "ped",
+   "got": "waiting_period",
+   "ok": false
+  },
+  {
+   "sample": "2-ped",
+   "field": "waitingMonthsStated",
+   "expected": 48,
+   "got": 48,
+   "ok": true
+  },
+  {
+   "sample": "2-ped",
+   "field": "fraudAlleged",
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "policyNumber",
+   "expected": "NNA/HEA/22/0771204",
+   "got": "NNA/HEA/22/0771204",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "claimNumber",
+   "expected": "NNA/RMB/25/031772",
+   "got": "NNA/RMB/25/031772",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "letterDate",
+   "expected": "2025-08-12",
+   "got": "2025-08-12",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "coverStartDate",
+   "expected": "2022-11-01",
+   "got": "2022-11-01",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "policyStartDate",
+   "expected": "2024-11-01",
+   "got": "2024-11-01",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "admissionDate",
+   "expected": "2025-06-10",
+   "got": "2025-06-10",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "claimSubmittedDate",
+   "expected": "2025-07-28",
+   "got": "2025-07-28",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "claimAmount",
+   "expected": 94300,
+   "got": 94300,
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "approvedAmount",
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "claimType",
+   "expected": "reimbursement",
+   "got": "reimbursement",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "reasonId",
+   "expected": "documents",
+   "got": "documents",
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "waitingMonthsStated",
+   "expected": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "sample": "3-documents",
+   "field": "fraudAlleged",
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "policyNumber",
+   "expected": "ANT/HLT/24/0903355",
+   "got": "ANT/HLT/24/0903355",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "claimNumber",
+   "expected": "ANT/CLM/25/227468",
+   "got": "ANT/CLM/25/227468",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "letterDate",
+   "expected": "2025-08-18",
+   "got": "2025-08-18",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "coverStartDate",
+   "expected": "2024-03-05",
+   "got": "2024-03-05",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "policyStartDate",
+   "expected": "2025-03-05",
+   "got": "2025-03-05",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "admissionDate",
+   "expected": "2025-07-22",
+   "got": "2025-07-22",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "claimSubmittedDate",
+   "expected": "2025-07-28",
+   "got": "2025-07-28",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "claimAmount",
+   "expected": 58000,
+   "got": 58000,
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "approvedAmount",
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "claimType",
+   "expected": "reimbursement",
+   "got": "reimbursement",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "reasonId",
+   "expected": "waiting_period",
+   "got": "waiting_period",
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "waitingMonthsStated",
+   "expected": 24,
+   "got": 24,
+   "ok": true
+  },
+  {
+   "sample": "4-waiting_period",
+   "field": "fraudAlleged",
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "policyNumber",
+   "expected": "VSG/HLT/21/0558013",
+   "got": "VSG/HLT/21/0558013",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "claimNumber",
+   "expected": "LCM/VSG/25/119204",
+   "got": "LCM/VSG/25/119204",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "letterDate",
+   "expected": "2025-05-06",
+   "got": "2025-05-06",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "coverStartDate",
+   "expected": "2021-08-20",
+   "got": null,
+   "ok": false
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "policyStartDate",
+   "expected": "2021-08-20",
+   "got": "2021-08-20",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "admissionDate",
+   "expected": "2025-04-14",
+   "got": "2025-04-14",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "claimSubmittedDate",
+   "expected": "2025-04-21",
+   "got": null,
+   "ok": false
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "claimAmount",
+   "expected": 248600,
+   "got": 248600,
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "approvedAmount",
+   "expected": 164600,
+   "got": 164600,
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "claimType",
+   "expected": "cashless",
+   "got": "cashless",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "reasonId",
+   "expected": "room_rent",
+   "got": "room_rent",
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "waitingMonthsStated",
+   "expected": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "sample": "5-room_rent",
+   "field": "fraudAlleged",
+   "expected": false,
+   "got": false,
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "policyNumber",
+   "expected": "NSB/HLT/23/0214498",
+   "got": "NSB/HLT/23/0214498",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "claimNumber",
+   "expected": "NSB/CLM/25/076512",
+   "got": "NSB/CLM/25/076512",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "letterDate",
+   "expected": "2025-09-20",
+   "got": "2025-09-20",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "coverStartDate",
+   "expected": "2023-02-14",
+   "got": null,
+   "ok": false
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "policyStartDate",
+   "expected": "2023-02-14",
+   "got": "2023-02-14",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "admissionDate",
+   "expected": "2025-09-11",
+   "got": "2025-09-11",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "claimSubmittedDate",
+   "expected": "2025-09-16",
+   "got": "2025-09-16",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "claimAmount",
+   "expected": 38200,
+   "got": 38200,
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "approvedAmount",
+   "expected": 0,
+   "got": 0,
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "claimType",
+   "expected": "reimbursement",
+   "got": "reimbursement",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "reasonId",
+   "expected": "not_necessary",
+   "got": "not_necessary",
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "waitingMonthsStated",
+   "expected": null,
+   "got": null,
+   "ok": true
+  },
+  {
+   "sample": "6-not_necessary",
+   "field": "fraudAlleged",
+   "expected": false,
+   "got": false,
+   "ok": true
+  }
+ ]
+}

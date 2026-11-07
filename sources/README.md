@@ -45,3 +45,7 @@ Notes on the files:
 8. The 5 Sep 2024 Master Circular on Protection of Policyholders' Interests has no explicit effective date in the text; `in_force_from` uses its issue date.
 9. Newer changes: a web search found no official IRDAI circular after Sep 2024 that changes these rules. Some 2026 blog posts claim new rules but cite no circular number. The health master circular says it is reviewed every year, so check irdai.gov.in for a newer version before launch. The IRDAI site could not be fully browsed for an updated version.
 10. The cioins.co.in (Ombudsman) site serves the PDF only from port 8082 and may change links.
+
+## Scale numbers
+
+`ombudsman-annual-reports.md` holds the complaint counts from the Council for Insurance Ombudsmen annual reports (2023-24 and 2024-25) that the README and the submission quote. It is not a rule source and `rules.json` does not use it.

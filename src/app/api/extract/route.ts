@@ -5,7 +5,7 @@ export const runtime = "nodejs";
 export const maxDuration = 60;
 
 const MAX_BYTES = 8 * 1024 * 1024;
-const TYPES = ["image/jpeg", "image/png", "image/webp", "image/heic", "image/heif", "application/pdf"];
+const TYPES = ["image/jpeg", "image/png", "image/webp"];
 
 export async function POST(req: Request) {
   const form = await req.formData().catch(() => null);

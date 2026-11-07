@@ -3,7 +3,7 @@ import { REASON_IDS } from "./reasons";
 
 const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 
-/** Facts read from a rejection letter (by Gemini vision) and confirmed or corrected by the user. */
+/** Facts read from a rejection letter (by a vision model) and confirmed or corrected by the user. */
 export const LetterFields = z.object({
   insurer: z.string().nullable(),
   policyNumber: z.string().nullable(),

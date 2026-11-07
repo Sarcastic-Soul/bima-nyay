@@ -44,7 +44,7 @@ export function Landing({
               <b className="block text-[20px]">{busy ? t.reading : t.uploadTitle}</b>
               <span className="text-[16px] text-muted">{t.uploadHint}</span>
             </div>
-            <input ref={input} type="file" accept="image/*,application/pdf" className="sr-only" id="letter"
+            <input ref={input} type="file" accept="image/jpeg,image/png,image/webp" className="sr-only" id="letter"
               onChange={(e) => { const f = e.target.files?.[0]; if (f) onFile(f); e.target.value = ""; }} />
             <button className="btn" disabled={busy} onClick={() => input.current?.click()}>
               {busy ? <SpinnerGap size={20} className="animate-spin" /> : <Camera size={20} weight="bold" />}
