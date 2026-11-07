@@ -62,13 +62,20 @@ function fmtDate(d: string | null | undefined, lang: Lang) {
   return `${day}/${m}/${y}`;
 }
 
+/** What is still unpaid: the claim minus anything the insurer already approved. */
+function owedAmount(f: LetterInput["fields"]): number | null {
+  if (f.claimAmount == null) return null;
+  const left = f.claimAmount - (f.approvedAmount ?? 0);
+  return left > 0 ? left : f.claimAmount;
+}
+
 function rupees(n: number | null) {
   return n == null ? null : `Rs ${n.toLocaleString("en-IN")}`;
 }
 
 function grounds(input: LetterInput, lang: Lang): string[] {
   return input.findings
-    .filter((f) => f.verdict !== "info" && f.ruleIds.length > 0)
+    .filter((f) => f.verdict === "rule_broken" && f.ruleIds.length > 0)
     .map((f) => {
       const text = lang === "hi" ? (GROUND_HI[f.id] ?? f.why) : f.why;
       return `${text} (${lang === "hi" ? "संदर्भ" : "Ref"}: ${cite(f.ruleIds)})`;
@@ -90,6 +97,7 @@ export function grievanceLetter(input: LetterInput, lang: Lang): string {
   const f = input.fields;
   const g = grounds(input, lang);
   const amount = rupees(f.claimAmount);
+  const owed = rupees(owedAmount(f));
   if (lang === "hi") {
     return `${header(input, lang)}
 
@@ -107,7 +115,7 @@ ${blank(f.insurer, lang)}
 ${g.length ? g.map((x, i) => `${i + 1}. ${x}`).join("\n") : "1. अस्वीकृति का कारण पॉलिसी शर्तों के अनुसार उचित नहीं है।"}
 
 मेरा अनुरोध:
-1. दावे पर दोबारा विचार कर पूरी राशि का भुगतान करें, साथ में देरी का ब्याज (बैंक दर + 2%)।
+1. दावे पर दोबारा विचार कर ${owed ? `बाकी राशि ${owed}` : "बाकी राशि"} का भुगतान करें, साथ में देरी का ब्याज (बैंक दर + 2%)।
 2. पुष्टि करें कि यह अस्वीकृति आपकी Claims Review Committee द्वारा स्वीकृत थी, और जिस रिकॉर्ड/क्लॉज़ पर आप निर्भर हैं उसकी प्रति दें।
 3. IRDAI नियम के अनुसार 14 दिनों के भीतर लिखित उत्तर दें।
 
@@ -134,7 +142,7 @@ My objections:
 ${g.length ? g.map((x, i) => `${i + 1}. ${x}`).join("\n") : "1. The ground given is not justified under the policy terms."}
 
 I request you to:
-1. Review the claim and pay the full amount, with interest for delay at bank rate plus 2%.
+1. Review the claim and pay ${owed ? `the unpaid amount of ${owed}` : "the unpaid amount"}, with interest for delay at bank rate plus 2%.
 2. Confirm that this rejection was approved by your Claims Review Committee, and share the record and the policy clause you rely on.
 3. Reply in writing within 14 days, as required by IRDAI.
 
@@ -151,14 +159,19 @@ export function ombudsmanComplaint(input: LetterInput, lang: Lang): string {
   const g = grounds(input, lang);
   const office = input.ombudsmanOffice;
   const amount = rupees(f.claimAmount);
+  const owed = rupees(owedAmount(f));
   const replyLine =
     lang === "hi"
       ? input.grievanceReplyDate
         ? `बीमा कंपनी ने दिनांक ${fmtDate(input.grievanceReplyDate, lang)} को उत्तर दिया, जो संतोषजनक नहीं है।`
-        : "बीमा कंपनी ने एक महीने के भीतर कोई उत्तर नहीं दिया।"
+        : input.grievanceSentDate
+          ? "बीमा कंपनी ने एक महीने के भीतर कोई उत्तर नहीं दिया।"
+          : "[बीमा कंपनी का उत्तर या उत्तर न मिलने की जानकारी भरें]"
       : input.grievanceReplyDate
         ? `The insurer replied on ${fmtDate(input.grievanceReplyDate, lang)}, which is not satisfactory.`
-        : "The insurer did not reply within one month.";
+        : input.grievanceSentDate
+          ? "The insurer did not reply within one month."
+          : "[Say what the insurer replied, or that it did not reply within one month]";
   if (lang === "hi") {
     return `${header(input, lang)}
 
@@ -181,7 +194,7 @@ ${office ? `${office.city}\n${office.address}` : "[अपने क्षेत�
 ${g.length ? g.map((x, i) => `${i + 1}. ${x}`).join("\n") : "1. अस्वीकृति पॉलिसी शर्तों के अनुसार उचित नहीं है।"}
 
 माँगी गई राहत:
-दावे की पूरी राशि ${blank(amount, lang)} का भुगतान, देरी के ब्याज सहित।
+दावे की बकाया राशि ${blank(owed, lang)} का भुगतान, देरी के ब्याज सहित।
 
 घोषणा:
 इस मामले पर किसी न्यायालय, उपभोक्ता आयोग या मध्यस्थता में कोई कार्यवाही लंबित नहीं है। ऊपर दी गई जानकारी मेरी जानकारी के अनुसार सही है।
@@ -212,7 +225,7 @@ Grounds of complaint:
 ${g.length ? g.map((x, i) => `${i + 1}. ${x}`).join("\n") : "1. The rejection is not justified under the policy terms."}
 
 Relief sought:
-Payment of the full claim amount of ${blank(amount, lang)}, with interest for delay.
+Payment of the unpaid claim amount of ${blank(owed, lang)}, with interest for delay.
 
 Declaration:
 No proceedings on this matter are pending before any court, consumer commission or arbitrator. The information above is true to the best of my knowledge.

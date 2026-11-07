@@ -32,6 +32,9 @@ export function checkRules(f: LetterFields, today: string): Finding[] {
   const out: Finding[] = [];
   const on = f.admissionDate ?? f.letterDate ?? today;
   const cover = f.coverStartDate ? monthsOfCover(f.coverStartDate, on) : null;
+  // The 60-month moratorium and the 36-month cap are from the 2024 rules. Claims from before 1 April 2024 fell under
+  // the 2020 rules (8 years, 48 months), so we do not call those a broken rule; we tell the user to check.
+  const older = on < "2024-04-01";
 
   // 1. Moratorium: after 60 months, non-disclosure cannot be used except proven fraud.
   if (f.reasonId === "non_disclosure" || f.reasonId === "ped") {
@@ -44,12 +47,20 @@ export function checkRules(f: LetterFields, today: string): Finding[] {
         ruleIds: ["moratorium_60m", "moratorium_credits_carry_over"],
         ask: "coverStartDate",
       });
+    } else if (cover >= 60 && older) {
+      out.push({
+        id: "older_rules",
+        verdict: "worth_checking",
+        title: "This claim is from before April 2024",
+        why: `The 5-year and 3-year limits in the 2024 IRDAI rules may not apply to a claim this old. The 2020 rules had an 8-year moratorium and a 48-month limit on pre-existing disease waiting periods. Check which rules your policy followed.`,
+        ruleIds: ["history_moratorium_8y_2020", "history_ped_48m_2020"],
+      });
     } else if (cover >= 60 && !f.fraudAlleged) {
       out.push({
         id: "moratorium_passed",
         verdict: "rule_broken",
         title: "Five-year moratorium has passed",
-        why: `You had ${cover} months of continuous cover on ${on}. After 60 months, a claim cannot be contested for non-disclosure or misrepresentation except established fraud, and the letter does not allege fraud.`,
+        why: `You had ${cover} months of continuous cover on ${on}. After 60 months, a claim cannot be contested for non-disclosure or misrepresentation except established fraud, and the letter does not allege fraud. The moratorium covers the sum insured of your first policy, not later increases.`,
         ruleIds: ["moratorium_60m", "moratorium_credits_carry_over", "moratorium_first_policy_si"],
       });
     } else if (cover >= 60 && f.fraudAlleged) {
@@ -75,7 +86,7 @@ export function checkRules(f: LetterFields, today: string): Finding[] {
         ruleIds: [ruleId],
       });
     }
-    if (cover !== null && cover >= 36) {
+    if (cover !== null && cover >= 36 && !older) {
       out.push({
         id: "waiting_served",
         verdict: "rule_broken",
@@ -128,9 +139,9 @@ export function checkRules(f: LetterFields, today: string): Finding[] {
   if (f.clausesCited.length === 0) {
     out.push({
       id: "no_clause_cited",
-      verdict: "rule_broken",
-      title: "Letter does not cite a policy clause",
-      why: "A rejection must be told with full details and reference to the specific policy terms. Ask the insurer to name the clause.",
+      verdict: "worth_checking",
+      title: "Check whether the letter names a policy clause",
+      why: "A rejection must give full details and refer to the specific policy terms. We did not find a clause in the letter. If it really names none, ask the insurer to name the clause.",
       ruleIds: ["rejection_reasons_in_writing"],
     });
   }

@@ -64,7 +64,7 @@ describe("checkRules", () => {
     expect(ids({ reasonId: "documents" })[0]).toBe("no_reject_for_documents:rule_broken");
   });
   it("flags missing clause", () => {
-    expect(ids({ clausesCited: [] })).toContain("no_clause_cited:rule_broken");
+    expect(ids({ clausesCited: [] })).toContain("no_clause_cited:worth_checking");
   });
   it("notes late decision past 15 days", () => {
     const r = checkRules({ ...base, claimSubmittedDate: "2026-09-01" }, "2026-11-07");
@@ -78,5 +78,18 @@ describe("checkRules", () => {
     const r = checkRules({ ...base, reasonId: "documents", clausesCited: [] }, "2026-11-07");
     const v = r.map((x) => x.verdict);
     expect(v.indexOf("info")).toBeGreaterThan(v.lastIndexOf("rule_broken"));
+  });
+
+  it("does not call a pre-April-2024 claim a broken 60-month rule", () => {
+    const r = ids({ admissionDate: "2023-09-10", letterDate: "2023-10-01", coverStartDate: "2015-01-01" });
+    expect(r.some((x) => x.startsWith("moratorium_passed"))).toBe(false);
+    expect(r).toContain("older_rules:worth_checking");
+  });
+  it("does not use the 36-month cap on a pre-April-2024 claim", () => {
+    const r = ids({ reasonId: "ped", admissionDate: "2023-09-10", letterDate: "2023-10-01", coverStartDate: "2019-01-01" });
+    expect(r.some((x) => x.startsWith("waiting_served"))).toBe(false);
+  });
+  it("still applies the 36-month cap to a 2026 claim", () => {
+    expect(ids({ reasonId: "ped", coverStartDate: "2020-01-01" })).toContain("waiting_served:rule_broken");
   });
 });

@@ -93,7 +93,8 @@ function parseSummary(text: string): Summary | null {
   if (!m) return null;
   try {
     const j = JSON.parse(m[0]);
-    if (typeof j.summary_en === "string" && ["strong", "mixed", "weak", "unclear"].includes(j.strength)) return j;
+    const texts = ["summary_en", "summary_hi", "next_step_en", "next_step_hi"] as const;
+    if (["strong", "mixed", "weak", "unclear"].includes(j.strength) && texts.every((k) => typeof j[k] === "string" && j[k].trim())) return j;
   } catch {}
   return null;
 }
@@ -170,10 +171,19 @@ export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGe
   }
 
   let askedForJson = false;
+  let askedForTools = false;
+  const called = new Set<string>();
   for (let turn = 0; turn < 6; turn++) {
     const res = await chat({ messages, tools: TOOLS, temperature: 0.2 });
     if (!res.toolCalls.length) {
-      const summary = parseSummary(res.content);
+      // Every fact must come from a tool, so a summary written before the rules, cases and deadlines were checked is refused.
+      const missing = ["check_rules", "find_similar_cases", "compute_deadlines"].filter((n) => !called.has(n));
+      if (missing.length && !askedForTools) {
+        askedForTools = true;
+        messages.push(res.message, { role: "user", content: `Before you answer, call these tools: ${missing.join(", ")}.` });
+        continue;
+      }
+      const summary = missing.length ? null : parseSummary(res.content);
       if (summary) {
         yield { type: "summary", summary };
         return;
@@ -190,6 +200,7 @@ export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGe
       try {
         args = JSON.parse(c.function.arguments || "{}");
       } catch {}
+      called.add(c.function.name);
       yield { type: "tool", name: c.function.name, args };
       let content: string;
       try {
