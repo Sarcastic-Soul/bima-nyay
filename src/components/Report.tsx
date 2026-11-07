@@ -1,5 +1,6 @@
 "use client";
-import { ArrowSquareOut, CheckCircle, Circle, SpinnerGap, WarningOctagon } from "@phosphor-icons/react";
+import { useEffect, useState } from "react";
+import { ArrowSquareOut, CheckCircle, Circle, SpeakerHigh, SpinnerGap, Stop, WarningOctagon } from "@phosphor-icons/react";
 import { fmtDate, type Dict, type Lang } from "@/lib/i18n";
 import type { LetterFields } from "@/lib/letter";
 import { REASONS, type ReasonId } from "@/lib/reasons";
@@ -8,6 +9,7 @@ import { FINDING_HI } from "@/lib/rules/hi";
 import { COMPLAINT_CHANNELS } from "@/lib/ombudsman/offices";
 import type { DeadlineStep } from "@/lib/deadlines";
 import type { ReportState } from "./types";
+import { track } from "./track";
 
 const ruleById = new Map(RULES.map((r) => [r.id, r]));
 const TOOL_ORDER = ["check_rules", "find_similar_cases", "compute_deadlines", "find_ombudsman_office"];
@@ -41,6 +43,32 @@ function deadlineText(t: Dict, d: DeadlineStep) {
   return t.dl_ombudsman_open(f(d.until), d.daysLeft ?? 0);
 }
 
+function ReadAloud({ t, lang, text, reasonId }: { t: Dict; lang: Lang; text: string; reasonId: string }) {
+  const [ok, setOk] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+  useEffect(() => {
+    setOk(typeof window !== "undefined" && "speechSynthesis" in window);
+    return () => { try { window.speechSynthesis?.cancel(); } catch {} };
+  }, []);
+  if (!ok) return null;
+  function toggle() {
+    const synth = window.speechSynthesis;
+    if (speaking) { synth.cancel(); setSpeaking(false); return; }
+    const u = new SpeechSynthesisUtterance(text);
+    u.lang = lang === "hi" ? "hi-IN" : "en-IN";
+    u.onend = u.onerror = () => setSpeaking(false);
+    synth.cancel();
+    synth.speak(u);
+    setSpeaking(true);
+    track("read_aloud", lang, reasonId);
+  }
+  return (
+    <button onClick={toggle} aria-pressed={speaking} className="btn btn-ghost no-print mt-4">
+      {speaking ? <Stop size={20} weight="fill" /> : <SpeakerHigh size={20} />}{speaking ? t.stopReading : t.readAloud}
+    </button>
+  );
+}
+
 export function Report({ t, lang, fields, r }: { t: Dict; lang: Lang; fields: LetterFields; r: ReportState }) {
   const s = r.summary;
   const o = r.cases?.outcomes;
@@ -60,9 +88,11 @@ export function Report({ t, lang, fields, r }: { t: Dict; lang: Lang; fields: Le
             <p className="verdict text-accent">{t[`strength_${s.strength}` as keyof Dict] as string}</p>
             <p className="mt-1 text-[18px]">{lang === "hi" ? s.summary_hi : s.summary_en}</p>
             <p className="mt-3 font-bold">{lang === "hi" ? s.next_step_hi : s.next_step_en}</p>
+            <ReadAloud t={t} lang={lang} reasonId={fields.reasonId}
+              text={`${lang === "hi" ? s.summary_hi : s.summary_en}. ${lang === "hi" ? s.next_step_hi : s.next_step_en}`} />
           </div>
         ) : r.error ? (
-          <p role="alert" className="mt-5 flex gap-2 border-l-4 border-warn bg-warn-soft px-5 py-4"><WarningOctagon size={22} className="shrink-0 text-warn" />{t.busy}</p>
+          <p role="alert" className="mt-5 flex gap-2 border-l-4 border-warn bg-warn-soft px-5 py-4"><WarningOctagon size={22} className="shrink-0 text-warn" />{r.findings ? t.summaryDown : t.busy}</p>
         ) : (
           <div className="mt-5"><Progress t={t} steps={r.steps} done={r.done} /></div>
         )}

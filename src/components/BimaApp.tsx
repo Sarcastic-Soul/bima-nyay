@@ -7,6 +7,7 @@ import { Landing } from "./Landing";
 import { ConfirmForm } from "./ConfirmForm";
 import { Report } from "./Report";
 import { Letters } from "./Letters";
+import { DidItWork } from "./DidItWork";
 import { track } from "./track";
 import type { ReportState, Situation } from "./types";
 
@@ -143,6 +144,7 @@ export function BimaApp() {
                 grievanceSentDate={situation.grievanceSentDate || undefined}
                 grievanceReplyDate={situation.grievanceReplyDate || undefined} today={today} />
             )}
+            {report.findings && <DidItWork t={t} lang={lang} reasonId={fields.reasonId} />}
             <button onClick={restart} className="btn btn-ghost no-print mt-10"><ArrowCounterClockwise size={20} />{t.startOver}</button>
           </div>
         )}

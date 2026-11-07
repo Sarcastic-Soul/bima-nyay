@@ -98,6 +98,29 @@ function parseSummary(text: string): Summary | null {
   return null;
 }
 
+/**
+ * What we can still show when the model is unavailable: rules, deadlines and the office are plain code.
+ * `seen` lists event types already sent, so nothing is sent twice.
+ */
+export function* deterministicEvents(input: AgentInput, deps: ToolDeps = {}, seen: ReadonlySet<string> = new Set()): Generator<AgentEvent> {
+  if (!seen.has("findings")) yield { type: "findings", findings: checkRules(input.fields, input.today) };
+  if (!seen.has("deadlines") && input.fields.letterDate) {
+    yield {
+      type: "deadlines",
+      steps: computeDeadlines({
+        rejectionDate: input.fields.letterDate,
+        grievanceSentDate: input.grievanceSentDate,
+        grievanceReplyDate: input.grievanceReplyDate,
+        today: input.today,
+      }),
+    };
+  }
+  if (!seen.has("office") && input.state && deps.route) {
+    const office = deps.route(input.state, input.district);
+    if (office) yield { type: "office", office };
+  }
+}
+
 export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGenerator<AgentEvent> {
   const search = deps.search ?? searchSimilar;
   const messages: ChatMessage[] = [

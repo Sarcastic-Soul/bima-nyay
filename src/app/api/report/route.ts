@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { runAgent } from "@/lib/agent";
+import { deterministicEvents, runAgent, type AgentEvent } from "@/lib/agent";
 import { LetterFields } from "@/lib/letter";
 import { findOffice } from "@/lib/ombudsman/offices";
 
@@ -26,10 +26,26 @@ export async function POST(req: Request) {
     async start(ctrl) {
       const send = (o: unknown) => ctrl.enqueue(enc.encode(JSON.stringify(o) + "\n"));
       send({ type: "start", today: input.today });
+      const deps = { route: (s: string, d?: string) => findOffice(s, d) };
+      const seen = new Set<string>();
+      let failed = false;
       try {
-        for await (const ev of runAgent(input, { route: (s, d) => findOffice(s, d) })) send(ev);
+        for await (const ev of runAgent(input, deps)) {
+          seen.add(ev.type);
+          if (ev.type === "error") failed = true;
+          else send(ev);
+        }
       } catch (e) {
         console.error("agent failed", e);
+        failed = true;
+      }
+      if (failed) {
+        // The model is down or did not finish: still send what plain code can work out.
+        try {
+          for (const ev of deterministicEvents(input, deps, seen)) send(ev as AgentEvent);
+        } catch (e) {
+          console.error("fallback failed", e);
+        }
         send({ type: "error", message: "service_busy" });
       }
       ctrl.close();

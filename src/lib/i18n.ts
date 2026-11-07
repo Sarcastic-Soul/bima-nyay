@@ -13,6 +13,7 @@ const en = {
   reading: "Reading your letter…",
   readFail: "We could not read this as a claim rejection letter. Try a clearer photo, or fill the details yourself.",
   busy: "The service is busy. Please try again in a minute.",
+  summaryDown: "The AI summary is not available right now. The rule checks, deadlines and letters below do not need it and are still correct. Try again later for the summary and past cases.",
   fillManually: "Fill details yourself",
   step1: "Read", step1d: "The AI reads the letter; you confirm the facts.",
   step2: "Check", step2d: "Rules are checked in code, each with its official source.",
@@ -78,6 +79,12 @@ const en = {
   disclaimer: "Information, not legal advice. Bima Nyay is free and open source. Your letter photo is not stored.",
   evidence: "How well does it work?",
   github: "Source code",
+  readAloud: "Read aloud", stopReading: "Stop",
+  shareWhatsApp: "Share on WhatsApp",
+  outcomeTitle: "Did it work?",
+  outcomeLede: "After you send your complaint, come back and tell us how it went. We count answers without any name or letter. Counts are self-reported.",
+  outcomeOk: "Insurer paid or reconsidered", outcomeNo: "Rejected again", outcomeWait: "Still waiting",
+  outcomeThanks: "Thank you. Your answer was counted.",
 };
 
 type Dict = typeof en;
@@ -96,6 +103,7 @@ const hi: Dict = {
   reading: "आपका पत्र पढ़ा जा रहा है…",
   readFail: "यह पत्र क्लेम अस्वीकृति पत्र के रूप में पढ़ा नहीं जा सका। साफ़ फ़ोटो लें, या जानकारी खुद भरें।",
   busy: "सेवा अभी व्यस्त है। एक मिनट बाद फिर कोशिश करें।",
+  summaryDown: "AI सारांश अभी उपलब्ध नहीं है। नीचे के नियम, समय-सीमाएँ और पत्र इसके बिना बने हैं और सही हैं। सारांश और पुराने मामलों के लिए बाद में फिर कोशिश करें।",
   fillManually: "जानकारी खुद भरें",
   step1: "पढ़ना", step1d: "AI पत्र पढ़ता है; आप जानकारी की पुष्टि करते हैं।",
   step2: "जाँच", step2d: "नियमों की जाँच कोड से, हर नियम का आधिकारिक स्रोत।",
@@ -161,6 +169,12 @@ const hi: Dict = {
   disclaimer: "यह जानकारी है, कानूनी सलाह नहीं। बीमा न्याय मुफ़्त और ओपन सोर्स है। आपके पत्र की फ़ोटो सेव नहीं होती।",
   evidence: "यह कितना सही है?",
   github: "सोर्स कोड",
+  readAloud: "सुनें", stopReading: "रोकें",
+  shareWhatsApp: "WhatsApp पर भेजें",
+  outcomeTitle: "क्या इससे काम बना?",
+  outcomeLede: "शिकायत भेजने के बाद यहाँ लौटकर बताएँ कि क्या हुआ। हम बिना नाम या पत्र के सिर्फ़ गिनती रखते हैं। गिनती लोगों के अपने जवाबों पर आधारित है।",
+  outcomeOk: "बीमा कंपनी ने भुगतान किया या दोबारा विचार किया", outcomeNo: "फिर से खारिज हुआ", outcomeWait: "अभी इंतज़ार है",
+  outcomeThanks: "धन्यवाद। आपका जवाब गिना गया।",
 };
 
 export const DICT: Record<Lang, Dict> = { en, hi };

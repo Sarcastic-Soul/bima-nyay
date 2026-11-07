@@ -15,7 +15,15 @@ const LABELS: Record<string, string> = {
   report_shown: "Reports shown",
   letter_copied: "Complaint letters copied",
   letter_downloaded: "Complaint letters downloaded",
+  whatsapp_shared: "Letters shared on WhatsApp",
+  read_aloud: "Summaries read aloud",
 };
+
+const OUTCOMES: [string, string][] = [
+  ["outcome_ok", "Insurer paid or reconsidered"],
+  ["outcome_no", "Rejected again"],
+  ["outcome_wait", "Still waiting"],
+];
 
 async function load() {
   try {
@@ -67,6 +75,19 @@ export default async function Stats() {
                 <div className="font-serif text-[48px] leading-none tabular-nums">{total ? Math.round((100 * hi) / total) : 0}%</div>
                 <div className="mt-3 font-semibold">Actions in Hindi</div>
               </div>
+            </div>
+            <h2 className="mt-12 font-serif text-[28px]">Did it work?</h2>
+            <p className="mt-2 max-w-[640px] text-muted">
+              Answers people chose to give after sending a complaint. These are self-reported, anonymous and few. Treat them as a
+              start, not proof.
+            </p>
+            <div className="mt-4 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-3">
+              {OUTCOMES.map(([e, label]) => (
+                <div key={e} className="bg-sheet p-6">
+                  <div className="font-serif text-[40px] leading-none tabular-nums">{get(e).toLocaleString("en-IN")}</div>
+                  <div className="mt-3 font-semibold">{label}</div>
+                </div>
+              ))}
             </div>
             {d.reasons.length > 0 && (
               <>

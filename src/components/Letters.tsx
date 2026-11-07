@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
-import { Copy, Check, DownloadSimple, Printer } from "@phosphor-icons/react";
+import { Copy, Check, DownloadSimple, Printer, WhatsappLogo } from "@phosphor-icons/react";
 import type { Dict, Lang } from "@/lib/i18n";
 import type { LetterFields } from "@/lib/letter";
 import type { Finding } from "@/lib/rules/check";
@@ -42,6 +42,11 @@ export function Letters({
     a.click();
     URL.revokeObjectURL(url);
     track("letter_downloaded", lang, fields.reasonId);
+  }
+
+  function shareWhatsApp() {
+    window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank", "noopener");
+    track("whatsapp_shared", lang, fields.reasonId);
   }
 
   const input = (k: keyof Complainant, label: string, type = "text") => (
@@ -86,6 +91,7 @@ export function Letters({
             <button className="btn" onClick={copy}>{copied ? <Check size={20} weight="bold" /> : <Copy size={20} />}{copied ? t.copied : t.copy}</button>
             <button className="btn btn-ghost" onClick={download}><DownloadSimple size={20} />{t.download}</button>
             <button className="btn btn-ghost" onClick={() => window.print()}><Printer size={20} />{t.print}</button>
+            <button className="btn btn-ghost" onClick={shareWhatsApp}><WhatsappLogo size={20} />{t.shareWhatsApp}</button>
           </div>
         </div>
       </div>

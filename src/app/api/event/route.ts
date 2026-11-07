@@ -5,7 +5,7 @@ import { REASON_IDS } from "@/lib/reasons";
 export const runtime = "nodejs";
 
 const Body = z.object({
-  event: z.enum(["letter_read", "report_shown", "letter_copied", "letter_downloaded", "sample_used"]),
+  event: z.enum(["letter_read", "report_shown", "letter_copied", "letter_downloaded", "sample_used", "whatsapp_shared", "read_aloud", "outcome_ok", "outcome_no", "outcome_wait"]),
   lang: z.enum(["en", "hi"]).optional(),
   reasonId: z.enum(REASON_IDS as [string, ...string[]]).optional(),
 });
