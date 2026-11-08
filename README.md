@@ -15,6 +15,14 @@ It gives information, not legal advice. It never files anything for the user and
 
 Built for the Code for a Billion hackathon, Financial Inclusion track.
 
+| Upload | Check what was read | Result |
+|---|---|---|
+| ![Landing page](public/screenshots/1-landing.png) | ![Fields read from the letter](public/screenshots/2-fields.png) | ![Rules check, cases, deadlines and office](public/screenshots/3b-rules.png) |
+
+| Hindi grievance letter | Evidence |
+|---|---|
+| ![Hindi grievance letter](public/screenshots/4-hindi-letter.png) | ![Evidence page](public/screenshots/5-evidence.png) |
+
 ## How it works
 
 1. **Read.** A vision model (Qwen 3.8 27B on Cloudflare Workers AI) reads the letter image into a fixed set of fields. The user checks and corrects them.
@@ -31,6 +39,7 @@ The steps the agent takes are shown on screen as they happen. If fewer than 8 si
 We have no field users yet. What we have instead is on `/evidence`, and every number comes from a script in this repo:
 
 - **Replay.** Each award from 2011 on is looked up using only awards from earlier years. The search text for stored cases has the decision sentences removed (`src/lib/cases/neutral.ts`), so a case cannot be found through its own outcome. Results are compared with simple baselines. Script: `scripts/replay.mts`, output: `data/processed/replay.json`.
+  Run on 8 Nov 2026: 1,157 awards from 2011 to 2014 were replayed against 2,687 earlier ones. The app gave an estimate for 644 and said "too few similar cases" for 513. When it answered, it called the outcome right 64% of the time, against 59% for the same-reason base rate and 50% for always guessing the most common outcome. Brier score 0.222, against 0.254 (base rate) and 0.257 (constant guess); lower is better. High estimates are too confident: cases put at 80-100% were won 76% of the time.
 - **Letter reading.** Six made-up letters with known answers. Script: `scripts/eval-extract.mts`.
 - **Rules.** A test checks that each rule quote appears word for word in the saved official text in `sources/`.
 - **Model choice.** `scripts/bench-models.mts` compares Cloudflare models on letter reading and on the tool loop.
