@@ -36,6 +36,8 @@ export async function extractLetter(image: { data: string; mimeType: string }): 
         ],
       },
     ],
+    // Reading an image is one call and usually takes ~10 s, but slow ones pass 25 s; the route allows 60 s.
+    timeoutMs: 50_000,
   });
   const json = res.content.match(/\{[\s\S]*\}/)?.[0];
   if (!json) return { ok: false, error: "could_not_read" };

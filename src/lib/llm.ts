@@ -21,6 +21,7 @@ export async function chat(opts: {
   tools?: ToolDef[];
   temperature?: number;
   maxTokens?: number;
+  timeoutMs?: number;
 }): Promise<ChatResult> {
   const id = process.env.CLOUDFLARE_ACCOUNT_ID;
   const token = process.env.CLOUDFLARE_API_TOKEN;
@@ -36,7 +37,7 @@ export async function chat(opts: {
   });
 
   for (let attempt = 0; ; attempt++) {
-    const res = await fetch(url, { method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body, signal: AbortSignal.timeout(25_000) });
+    const res = await fetch(url, { method: "POST", headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" }, body, signal: AbortSignal.timeout(opts.timeoutMs ?? 25_000) });
     if (res.ok) {
       const json = (await res.json()) as { choices?: { message?: { content?: string | null; tool_calls?: ToolCall[] } }[] };
       const msg = json.choices?.[0]?.message;

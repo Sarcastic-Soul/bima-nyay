@@ -173,8 +173,15 @@ export async function* runAgent(input: AgentInput, deps: ToolDeps = {}): AsyncGe
   let askedForJson = false;
   let askedForTools = false;
   const called = new Set<string>();
+  const required = ["check_rules", "find_similar_cases", "compute_deadlines", ...(input.state ? ["find_ombudsman_office"] : [])];
+  let toolsDone = false;
   for (let turn = 0; turn < 6; turn++) {
-    const res = await chat({ messages, tools: TOOLS, temperature: 0.2 });
+    // Once every needed tool has run, stop offering tools: the model otherwise repeats calls until it runs out of turns.
+    if (!toolsDone && required.every((n) => called.has(n))) {
+      toolsDone = true;
+      messages.push({ role: "user", content: "All tools have run. Now reply with only the JSON object described in your instructions." });
+    }
+    const res = await chat({ messages, tools: toolsDone ? undefined : TOOLS, temperature: 0.2 });
     if (!res.toolCalls.length) {
       // Every fact must come from a tool, so a summary written before the rules, cases and deadlines were checked is refused.
       const missing = ["check_rules", "find_similar_cases", "compute_deadlines"].filter((n) => !called.has(n));
